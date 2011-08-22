@@ -1,3 +1,5 @@
+.provided-by p { padding: 10px 0 0 0; font-size: 18px; line-height: 1.3em;}
+
 /* Contain floats: h5bp.com/q */ 
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }

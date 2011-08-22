@@ -1,16 +1,18 @@
 <div class="index">
 	<?php //echo $this->element('twitpic'); ?>
 	<div class="clearfix">
-		<div class="left width-40">
-			<p>This Project, built in CakePHP 2.0, is brought to you by:</p>
-			<?php echo $this->Html->link(
-				$this->Html->image('loadsys_logo.png'),
-				'http://loadsys.com',
-				array('escape' => false),
-				false
-			); ?>
+		<div class="left width-60">
+			<div style="padding-bottom:10px;" class="provided-by">
+				<?php echo $this->Html->link(
+					$this->Html->image('loadsys_logo.png'),
+					'http://loadsys.com',
+					array('escape' => false, 'class' => 'right'),
+					false
+				); ?>
+				<p>This Project, built in CakePHP 2.0,<br />is brought to you by:</p>
+			</div>
 		</div>
-		<div class="socialShare left width-60">
+		<div class="socialShare left width-40">
 			<div class="facebookShare">
 				<a name="fb_share" type="box_count" href="http://www.facebook.com/sharer.php">Share</a>
 				<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
