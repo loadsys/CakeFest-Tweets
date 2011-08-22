@@ -2,20 +2,11 @@
 	<?php //echo $this->element('twitpic'); ?>
 	<div class="clearfix">
 		<div class="left width-40">
+			<p>This Project, built in CakePHP 2.0, is brought to you by:</p>
 			<?php echo $this->Html->link(
-				$this->Html->image(
-					'cake.png',
-					array(
-						'alt' => 'CakePHP 1.3',
-						'height' => 60,
-						'width' => 60
-					)
-				),
-				'http://cakephp.org',
-				array(
-					'escape' => false,
-					'target' => '_blank'
-				),
+				$this->Html->image('loadsys_logo.png'),
+				'http://loadsys.com',
+				array('escape' => false),
 				false
 			); ?>
 		</div>
@@ -39,13 +30,6 @@
 	</div>
 	<div style="clear: both"></div>
 	<div class="socialShare">
-		<p>Brought to you by</p>
-		<?php echo $this->Html->link(
-			$this->Html->image('loadsys_logo.png'),
-			'http://loadsys.com',
-			array('escape' => false),
-			false
-		); ?>
 		<p>
 			<?php /*echo $this->Html->link(
 				$this->Html->image(
