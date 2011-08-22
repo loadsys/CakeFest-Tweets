@@ -9,7 +9,7 @@
 					array('escape' => false, 'class' => 'right'),
 					false
 				); ?>
-				<p>This Project, built in CakePHP 2.0,<br />is brought to you by:</p>
+				<p>This project, built in CakePHP 2.0,<br />is brought to you by:</p>
 			</div>
 		</div>
 		<div class="socialShare left width-40">
