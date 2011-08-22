@@ -1,0 +1,1 @@
+<?php echo json_encode(compact('since_id', 'tweets')); ?>

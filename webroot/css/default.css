@@ -1,0 +1,9 @@
+/* Contain floats: h5bp.com/q */ 
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+.left { float: left; }
+.right { float: right; }
+
+.width-5 { width: 5%; }.width-10 { width: 10%; }.width-15 { width: 15%; }.width-20 { width: 20%; }.width-25 { width: 25%; }.width-30 { width: 30%; }.width-33 { width: 33%; }.width-35 { width: 35%; }.width-40 { width: 40%; }.width-45 { width: 45%; }.width-50 { width: 50%; }.width-55 { width: 55%; }.width-60 { width: 60%; }.width-65 { width: 65%; }.width-66 { width: 66%; }.width-70 { width: 70%; }.width-75 { width: 75%; }.width-80 { width: 80%; }.width-85 { width: 85%; }.width-90 { width: 90%; }.width-95 { width: 95%; }.width-100 { width: 100%; }

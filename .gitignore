@@ -1,0 +1,7 @@
+tmp/cache/models/*
+tmp/cache/views/*
+tmp/cache/persistent/*
+tmp/logs/*
+Config/database.php
+Config/core.php
+

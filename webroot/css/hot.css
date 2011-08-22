@@ -1,0 +1,55 @@
+body {
+	background: url(hot_images/bg_top.jpg) #fff repeat-x;
+}
+a {
+	color: #e37210;
+}
+#content_right h3, #index_articles h3 {
+	background: url(hot_images/bg_strip.gif);
+	color: #3d332a;
+}
+.boxgrid{ 
+	background:#161613 url(hot_images/bg_strip.gif);
+}
+#footer_wrap {
+	background: url(hot_images/bg_bottom.jpg) repeat-x #f6d6ba;
+}
+#footer_meta li a:hover, #content_right li a:hover {
+	background: #e9bf9b;
+}
+#footer_meta li li a, #content_right li a {
+	border-bottom: 1px solid #ceb39b;
+}
+#footer_meta ul ul, #content_right ul {
+	border-top: 1px solid #ceb39b;
+}
+#tagline, #tagline_in {
+	color: #744d2b;
+}
+
+
+.sf-menu, .sf-menu li {
+	background: url(hot_images/nav_seporator.gif) no-repeat top left;
+}
+.sf-menu li.current a {
+	background: url(hot_images/arrow_r.gif) bottom center no-repeat;
+}
+.sf-menu li a:hover, .sf-menu li.current a { 
+	color: #ffd4af;
+}
+.sf-menu li li a:hover {
+	background: #f9e2cd;
+	color: #cc986a;
+}
+.sf-menu li li {
+	background:	#f3b279;
+	border-bottom: 1px solid #fff;
+}
+.sf-menu li li li {
+	background: #f3b279;
+}
+
+
+.boxgrid p{ 
+	color:#3d332a;  
+} 
