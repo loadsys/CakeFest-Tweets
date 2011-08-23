@@ -39,7 +39,10 @@ class TweetsController extends AppController {
 				}
 			}
 			$ids = Set::extract('/Tweet/id', $tweets);
-			$since_id = max($ids);
+			if (!empty($ids)) {
+				$since_id = max($ids);
+			}
+			
 		}
 		
 		$this->set(compact('since_id', 'tweets'));
