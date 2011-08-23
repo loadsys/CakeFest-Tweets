@@ -28,8 +28,6 @@ class TweetsController extends AppController {
 			'order' => array('Tweet.id' => 'ASC'),
 			'limit' => 100
 		));
-		
-		$newSinceId = $since_id;
 		if (empty($tweets)) {
 			$tweets = array();
 		} else {
@@ -40,7 +38,8 @@ class TweetsController extends AppController {
 					$tweets[$key]['Tweet']['from'] = html_entity_decode($tweets[$key]['Tweet']['from']);
 				}
 			}
-			$since_id = isset($tweets[0]['Tweet']['id']) ? $tweets[0]['Tweet']['id'] : $since_id;
+			$ids = Set::extract('/Tweet/id', $tweets);
+			$since_id = max($ids);
 		}
 		
 		$this->set(compact('since_id', 'tweets'));

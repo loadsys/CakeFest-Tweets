@@ -171,12 +171,8 @@ class TwitterSearch {
 			$search = substr($search, 0, strlen($search) - 1);
 		}
 		
-		debug($search);
-		
 		$data = file_get_contents($search);
 		$data = json_decode($data, $this->decodeType);
-		
-		debug($data);
 		
 		return $data;
 	}
