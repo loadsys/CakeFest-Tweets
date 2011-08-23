@@ -40,7 +40,7 @@ class TweetsController extends AppController {
 					$tweets[$key]['Tweet']['from'] = html_entity_decode($tweets[$key]['Tweet']['from']);
 				}
 			}
-			$since_id = isset($tweets[0]['Tweet']['tweet_id']) ? $tweets[0]['Tweet']['tweet_id'] : $since_id;
+			$since_id = isset($tweets[0]['Tweet']['id']) ? $tweets[0]['Tweet']['id'] : $since_id;
 		}
 		
 		$this->set(compact('since_id', 'tweets'));
