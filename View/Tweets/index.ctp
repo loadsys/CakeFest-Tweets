@@ -12,7 +12,7 @@
 				<p>This project, built in CakePHP 2.0,<br />is brought to you by:</p>
 			</div>
 		</div>
-		<div class="socialShare left width-40">
+		<?php /*<div class="socialShare left width-40">
 			<div class="facebookShare">
 				<a name="fb_share" type="box_count" href="http://www.facebook.com/sharer.php">Share</a>
 				<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
@@ -24,7 +24,7 @@
 				<script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
 			</div>
 			<div style="clear:both"></div>
-		</div>
+		</div> */ ?>
 	</div>
 	<div class="tweets elements">
 	</div>

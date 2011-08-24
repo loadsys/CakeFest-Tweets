@@ -6,7 +6,7 @@
 	<meta name="description" content="Get live, up to date tweets from the CakePHP CakeFest 2011 conference in Manchester. Follow the tweets from the CakePHP developers that are at the conference." />
 	<meta name="keywords" content="CakePHP, CakeFest, CakeFestTweets, 2011, CakePHP conference, CakePHP developers" />
 	<meta name="title" content="Get live, up to date tweets from the CakePHP CakeFest 2011 conference in Manchester. Follow the tweets from the CakePHP developers that are at the conference." />
-	<meta property="og:title" content="Get live, up to date tweets from the CakePHP CakeFest 2011 conference in Manchester. Follow the tweets from the CakePHP developers that are at the conference." />
+	<meta property="og:title" content="CakeFestTweets" />
 	<meta property="og:description" content="Get live, up to date tweets from the CakePHP CakeFest 2011 conference in Manchester. Follow the tweets from the CakePHP developers that are at the conference." />
 	<?php echo $this->Html->css('styles'); ?>
 	<?php echo $this->Html->css('default'); ?>
