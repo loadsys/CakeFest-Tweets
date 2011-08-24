@@ -3,9 +3,9 @@
 <head lang="en">
 	<title>CakePHP CakeFest 2011 - CakeFestTweets.com</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="Get live, up to date tweets from the CakePHP CakeFest 2010 conference in Chicago, IL. Follow the tweets from the CakePHP developers that are at the conference." />
-	<meta name="keywords" content="CakePHP, CakeFest, CakeFestTweets, 2010, CakePHP conference, CakePHP developers" />
-	<meta name="title" content="Get live, up to date tweets from the CakePHP CakeFest 2010 conference in Chicago, IL. Follow the tweets from the CakePHP developers that are at the conference." />
+	<meta name="description" content="Get live, up to date tweets from the CakePHP CakeFest 2011 conference in Manchester. Follow the tweets from the CakePHP developers that are at the conference." />
+	<meta name="keywords" content="CakePHP, CakeFest, CakeFestTweets, 2011, CakePHP conference, CakePHP developers" />
+	<meta name="title" content="Get live, up to date tweets from the CakePHP CakeFest 2011 conference in Manchester. Follow the tweets from the CakePHP developers that are at the conference." />
 	<?php echo $this->Html->css('styles'); ?>
 	<?php echo $this->Html->css('default'); ?>
 	<?php //echo $this->Html->css('hot'); ?>
