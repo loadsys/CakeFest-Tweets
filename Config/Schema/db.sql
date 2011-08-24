@@ -36,5 +36,5 @@ CREATE TABLE `accounts` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
-ALTER TABLE tweets ADD COLUMN is_blacklist TINYINT(1) default 0 after form;
+ALTER TABLE tweets ADD COLUMN is_blacklist TINYINT(1) default 0;
 ALTER TABLE users ADD COLUMN is_blacklist TINYINT(1) default 0;
