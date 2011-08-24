@@ -91,7 +91,7 @@ $(document).ready(function() {
 	loadUsers();
 	setInterval(function() {
 		loadTweets();
-	}, 45000);
+	}, 60000);
 	setInterval(function() {
 		loadUsers();
 	}, 60000);
