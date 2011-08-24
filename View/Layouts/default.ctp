@@ -52,6 +52,9 @@
 				<li class="seporator">
 				&nbsp;
 				</li>
+				<?php if (AuthComponent::user()): ?>
+					<li><?php echo $this->Html->link('User List', array('controller' => 'users', 'action' => 'index')); ?></li>
+				<?php endif; ?>
 			</ul>
 			<div id="copyright">
 				&copy; <?php echo date("Y"); ?> CakeFestTweets.com

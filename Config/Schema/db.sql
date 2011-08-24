@@ -26,3 +26,15 @@ CREATE TABLE `users` (
   `tweet_count` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
+
+CREATE TABLE `accounts` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) DEFAULT NULL,
+  `password` char(40) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+
+ALTER TABLE tweets ADD COLUMN is_blacklist TINYINT(1) default 0 after form;
+ALTER TABLE users ADD COLUMN is_blacklist TINYINT(1) default 0;

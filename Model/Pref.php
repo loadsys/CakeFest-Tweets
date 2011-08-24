@@ -1,8 +1,10 @@
 <?php
-
+/**
+ * Pref Model
+ *
+ * @extends AppModel
+ */
 class Pref extends AppModel {
-
-	public $name = 'Pref';
 	
 	public function since_id($since_id = null) {
 		$record = $this->find('first');

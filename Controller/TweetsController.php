@@ -2,29 +2,45 @@
 
 class TweetsController extends AppController {
 	
+/**
+ * uses
+ * 
+ * @var array
+ * @access public
+ */
 	public $uses = array('Pref', 'Tweet', 'User');
 	
-	/**
-	 * index function.
-	 * 
-	 * @access public
-	 * @return void
-	 */
-	public function index() {
-	
+/**
+ * beforeFilter function.
+ * 
+ * @access public
+ * @return void
+ */
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow('index', 'tweets', 'users', 'get_tweets_from_twitter');
 	}
+	
+/**
+ * index function.
+ * 
+ * @access public
+ * @return void
+ */
+	public function index() {}
 
-	/**
-	 * Load Tweets that are saved in the local database for the initial 
-	 * page load. After page load, ajax will be used to load new tweets
-	 * and prepend them to the list
-	 *
-	 * @access public
-	 * @return void
-	 */
+/**
+ * Load Tweets that are saved in the local database for the initial 
+ * page load. After page load, ajax will be used to load new tweets
+ * and prepend them to the list
+ *
+ * @access public
+ * @return void
+ */
 	public function tweets($since_id = null) {
 		$this->layout = false;
 		$tweets = $this->Tweet->find('all', array(
+			'conditions' => array('Tweet.is_blacklist' => 0),
 			'order' => array('Tweet.id' => 'ASC'),
 			'limit' => 100
 		));
@@ -48,24 +64,24 @@ class TweetsController extends AppController {
 		$this->set(compact('since_id', 'tweets'));
 	}
 	
-	/**
-	 * get_users function.
-	 * 
-	 * @access public
-	 * @return void
-	 */
+/**
+ * get_users function.
+ * 
+ * @access public
+ * @return void
+ */
 	public function users() {
 		$this->layout = false;
 		$users = $this->User->top_ten();
 		$this->set(compact('users'));
 	}
 	
-	/**
-	 * get_tweets_from_twitter function.
-	 * 
-	 * @access public
-	 * @return void
-	 */
+/**
+ * get_tweets_from_twitter function.
+ * 
+ * @access public
+ * @return void
+ */
 	public function get_tweets_from_twitter() {
 		$this->layout = false;
 		$this->Tweet->load_tweets('cakefest');

@@ -6,7 +6,6 @@ class Tweet extends AppModel {
 	
 	public $belongsTo = array('User');
 	
-	
 	public function new_tweets_since($since_id = null) {
 		if (!$since_id) {
 			$since_id = ClassRegistry::init('Pref')->since_id();

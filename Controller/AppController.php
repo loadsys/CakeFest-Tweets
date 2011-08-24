@@ -31,4 +31,32 @@ App::uses('Controller', 'Controller');
  * @package       Cake.Console.Templates.skel.Controller
  */
 class AppController extends Controller {
+	
+/**
+ * List of application wide components
+ * 
+ * @var string
+ * @access public
+ */
+	public $components = array('Auth', 'Session');
+
+/**
+ * beforeFilter function.
+ * 
+ * @access public
+ * @return void
+ */
+	public function beforeFilter() {
+		$this->Auth->authenticate = array(
+			'Form' => array(
+				'fields' => array(
+					'username' => 'email',
+					'password' => 'password'
+				),
+				'userModel' => 'Account'
+			)
+		);
+		$this->Auth->allow('display');
+	}
+
 }
