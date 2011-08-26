@@ -66,11 +66,51 @@ class User extends AppModel {
 		$user = $this->read();
 		if (empty($user)) { return false; }
 		$this->set('is_blacklist', 1);
+		$this->set('is_participant', 0);
 		$tweets = $this->Tweet->findAllByUserId($id);
 		foreach ($tweets as &$tweet) {
 			$tweet['Tweet']['is_blacklist'] = 1;
 		}
 		return ($this->Tweet->saveAll($tweets) && $this->save());
+	}
+
+/**
+ * participant function.
+ * 
+ * @access public
+ * @param mixed $id
+ * @param mixed $allowed
+ * @return void
+ */
+	public function participant($id, $allowed) {
+		$this->id = $id;
+		$user = $this->read();
+		if (empty($user)) { return false; }
+		$this->set('is_participant', $allowed);
+		return $this->save();
+	}
+
+/**
+ * winner function.
+ * 
+ * @access public
+ * @return void
+ */
+	public function winner() {
+		$users = $this->find('all', array(
+			'conditions' => array(
+				'User.is_blacklist' => 0,
+				'User.is_participant' => 1
+			)
+		));
+		$participants = array();
+		foreach ($users as $user) {
+			$name = $user['User']['username'];
+			for ($i = 0; $i < $user['User']['tweet_count']; $i++) {
+				array_push($participants, $name);
+			}
+		}
+		return $participants[rand(0, count($participants) - 1)];
 	}
 
 }

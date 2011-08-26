@@ -66,5 +66,40 @@ class UsersController extends AppController {
 		$this->User->blacklist($id);
 		$this->redirect(array('action' => 'index'));
 	}
+	
+/**
+ * participant function.
+ * 
+ * @access public
+ * @param mixed $id
+ * @return void
+ */
+	public function participant($id) {
+		$this->User->participant($id, 1);
+		$this->redirect($this->referer());
+	}
+	
+/**
+ * not_participant function.
+ * 
+ * @access public
+ * @param mixed $id
+ * @return void
+ */
+	public function not_participant($id) {
+		$this->User->participant($id, 0);
+		$this->redirect($this->referer());
+	}
+	
+/**
+ * winner function.
+ * 
+ * @access public
+ * @return void
+ */
+	public function winner() {
+		echo 'The winner is '.$this->User->winner();
+		exit();
+	}
 
 }
