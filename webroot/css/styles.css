@@ -600,3 +600,21 @@ div.twitImg {
 	width: 85px;
 }
 
+.prize {
+
+}
+
+.prize-largest {
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.prize-larger {
+	font-size: 16px;
+}
+
+.prize-note {
+	text-align: center;
+	font-size: 10px;
+}
+
