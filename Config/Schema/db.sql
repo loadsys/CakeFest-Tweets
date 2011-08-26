@@ -38,3 +38,5 @@ CREATE TABLE `accounts` (
 
 ALTER TABLE tweets ADD COLUMN is_blacklist TINYINT(1) default 0;
 ALTER TABLE users ADD COLUMN is_blacklist TINYINT(1) default 0;
+
+ALTER TABLE users ADD COLUMN is_participant TINYINT(1) default 1;
