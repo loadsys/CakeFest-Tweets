@@ -37,11 +37,12 @@ class Tweet extends AppModel {
 			$TwitterSearch->setOption('since_id', $since_id);
 		}
 		$results = $TwitterSearch->search();
-		if (!empty($results['max_id'])) {
-			$Pref->since_id($results['max_id']);
-		}
+		$id = null;
 		for ($i = count($results['results']) - 1; $i >= 0; $i--) {
-			$this->save_tweet($results['results'][$i]);
+			$id = $this->save_tweet($results['results'][$i]);
+		}
+		if ($id != null) {
+			$Pref->since_id($id);
 		}
 	}
 	
@@ -91,6 +92,7 @@ class Tweet extends AppModel {
 				'content' => $tweet['text'],
 				'from' => $tweet['source']
 			)));
+			return $this->id;
 		}
 	}
 
