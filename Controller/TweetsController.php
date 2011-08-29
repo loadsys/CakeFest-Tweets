@@ -41,9 +41,10 @@ class TweetsController extends AppController {
 		$this->layout = false;
 		$tweets = $this->Tweet->find('all', array(
 			'conditions' => array('Tweet.is_blacklist' => 0),
-			'order' => array('Tweet.id' => 'ASC'),
+			'order' => array('Tweet.id' => 'DESC'),
 			'limit' => 100
 		));
+		$tweets = array_reverse($tweets);
 		if (empty($tweets)) {
 			$tweets = array();
 		} else {
