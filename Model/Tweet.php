@@ -32,9 +32,11 @@ class Tweet extends AppModel {
 		$since_id = 
 		$TwitterSearch = new TwitterSearch('json', $search);
 		$TwitterSearch->setOption('rpp', 30);
-		$since_id = $Pref->since_id();
-		if (!empty($since_id)) {
-			$TwitterSearch->setOption('since_id', $since_id);
+		$tweet = ClassRegistry::init('Tweet')->find('first', array(
+			'order' => array('Tweet.id' => 'DESC')
+		));
+		if (!empty($tweet)) {
+			$TwitterSearch->setOption('since_id', $tweet['Tweet']['tweet_id']);
 		}
 		$results = $TwitterSearch->search();
 		$id = null;
