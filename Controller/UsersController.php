@@ -98,8 +98,8 @@ class UsersController extends AppController {
  * @return void
  */
 	public function winner() {
-		echo 'The winner is '.$this->User->winner();
-		exit();
+		$winners = $this->User->winners(3);
+		$this->set(compact('winners'));
 	}
 
 }

@@ -89,6 +89,26 @@ class User extends AppModel {
 		$this->set('is_participant', $allowed);
 		return $this->save();
 	}
+	
+/**
+ * winners function.
+ * 
+ * @access public
+ * @param mixed $count
+ * @return void
+ */
+	public function winners($count) {
+		$winners = array();
+		for ($i = 0; $i < $count; $i++) {
+			$winner = $this->winner();
+			if (array_key_exists($winner, $winners) === false) {
+				$winners[$winner] = $winner;
+			} else {
+				$i--;
+			}
+		}
+		return $winners;
+	}
 
 /**
  * winner function.
