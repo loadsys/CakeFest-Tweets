@@ -86,7 +86,7 @@
 </div>
 <script type="text/javascript">
 var since_id = null;
-$(document).ready(function() {
+$(window).load(function() {
 	loadTweets();
 	loadUsers();
 	setInterval(function() {
