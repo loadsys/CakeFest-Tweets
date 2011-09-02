@@ -30,11 +30,12 @@ function loadTweets() {
 			var tweetCell = '';
 			var from = '';
 			for (var i in data.tweets) {
+				var tweet_id = new BigNumber(data.tweets[i].Tweet.tweet_id);
 				username = '<div class="tweetUserName"><a href="http://www.twitter.com/'+data.tweets[i].Tweet.username+'" target="_blank">'+data.tweets[i].Tweet.username+'</a></div>';
 				userimage = '<div class="tweetImage"><img src="'+data.tweets[i].Tweet.user_image+'" /></div>';
 				text = '<div class="tweetText '+data.tweets[i].Tweet.tweet_id+'">'+data.tweets[i].Tweet.content+'</div>';
 				from = unescape(data.tweets[i].Tweet.from);
-				client = '<div class="tweetFooter"><div class="tweetClient">'+unescape(data.tweets[i].Tweet.from)+'&nbsp;<a href="http://twitter.com/'+data.tweets[i].Tweet.username+'/status/'+data.tweets[i].Tweet.tweet_id+'">View Tweet</a></div>';
+				client = '<div class="tweetFooter"><div class="tweetClient">'+unescape(data.tweets[i].Tweet.from)+'&nbsp;<a href="http://twitter.com/'+data.tweets[i].Tweet.username+'/status/'+tweet_id+'">View Tweet</a></div>';
 				date = '<div class="tweetDate">'+data.tweets[i].Tweet.created+'</div></div>';
 				tweetCell = tweetDivStart+userimage+username+textReplacement(text)+client+date+tweetDivEnd;
 				$(".tweets").prepend(tweetCell);

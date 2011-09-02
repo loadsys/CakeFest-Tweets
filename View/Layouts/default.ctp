@@ -14,10 +14,10 @@
 	<?php echo $this->Html->css('cold'); ?>
 	<?php //echo $this->Html->css('blue'); ?>
 	<?php echo $this->Html->css('superfish/superfish.css'); ?>
-	
 	<?php echo $this->Html->script('jquery'); ?>
 	<?php echo $this->Html->script('jquery-ui'); ?>
 	<?php echo $this->Html->script('jquery.form'); ?>
+	<?php echo $this->Html->script('plugin'); ?>
 
 	<?php echo $scripts_for_layout; ?>
 
