@@ -89,7 +89,7 @@ class Tweet extends AppModel {
 				'user_image' => $tweet['profile_image_url'],
 				'user_id' => $user_id,
 				'twitter_id' => $tweet['from_user_id'],
-				'tweet_id' => $tweet['id'],
+				'tweet_id' => $tweet['id_str'],
 				'tweet_datetime' => $tweet['created_at'],
 				'content' => $tweet['text'],
 				'from' => $tweet['source']
