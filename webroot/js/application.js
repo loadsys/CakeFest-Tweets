@@ -31,7 +31,7 @@ function loadTweets() {
 			var from = '';
 			for (var i in data.tweets) {
 				var tweet_id = new BigNumber(data.tweets[i].Tweet.tweet_id);
-				tweet_id = tweet_id.replace(/\./, '');
+				tweet_id = tweet_id.toString().replace(/\./, '');
 				username = '<div class="tweetUserName"><a href="http://www.twitter.com/'+data.tweets[i].Tweet.username+'" target="_blank">'+data.tweets[i].Tweet.username+'</a></div>';
 				userimage = '<div class="tweetImage"><img src="'+data.tweets[i].Tweet.user_image+'" /></div>';
 				text = '<div class="tweetText '+data.tweets[i].Tweet.tweet_id+'">'+data.tweets[i].Tweet.content+'</div>';
